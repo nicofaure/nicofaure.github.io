@@ -81,7 +81,7 @@ function myMove() {
   var pad = document.getElementById('pad1');
   var positions = ['organic7','organic6','organic5','organic4','organic5','organic6','organic7'];
   
-  var id = setInterval(swap,1500);
+  var id = setInterval(swap,1000);
   function swap(){
     var position = positions.pop(); 
     console.log("Swapping position " + position);     
@@ -89,14 +89,14 @@ function myMove() {
       clearInterval(id);
       var pad2 = document.getElementById('pad2');
       var positions2 = ['organic5','organic6','pad1','organic7','organic8','organic9'];
-      var id2 = setInterval(swap2,1500);
+      var id2 = setInterval(swap2,1000);
       function swap2(){
         var position2 = positions2.pop(); 
         if(positions2.length==0){
           clearInterval(id2);
           var pad3 = document.getElementById('pad3');
           var positions3 = ['organic7','organic8','organic9','organic10'];
-          var id3 = setInterval(swap3,1500);    
+          var id3 = setInterval(swap3,1000);    
           function swap3(){
             var position3 = positions3.pop(); 
             if(positions3.length==0){
